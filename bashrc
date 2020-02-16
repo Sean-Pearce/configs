@@ -21,6 +21,13 @@ alias ip='curl icanhazip.com'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+alias gst='git status'
+alias gcm='git commit -m'
+alias gad='git add .'
+alias gin='git stash'
+alias gou='gin pop'
+alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+
 
 #   -------------------------------
 #   1.  ENVIRONMENT CONFIGURATION
