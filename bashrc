@@ -111,9 +111,7 @@ alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
 
 zipf () { zip -r "$1".zip "$1" ; }          # zipf:         To create a ZIP archive of a folder
 alias numFiles='echo $(ls -1 | wc -l)'      # numFiles:     Count of non-hidden files in current dir
-alias make1mb='dd if=/dev/zero of=1MB.dat bs=1M count=1'         # make1mb:      Creates a file of 1mb size (all zeros)
-alias make5mb='dd if=/dev/zero of=1MB.dat bs=5M count=1'         # make5mb:      Creates a file of 5mb size (all zeros)
-alias make10mb='dd if=/dev/zero of=1MB.dat bs=10M count=1'      # make10mb:     Creates a file of 10mb size (all zeros)
+mkfile () { dd if=/dev/zero of=$1B.dat bs=$1 count=1 ; }
 
 #   cdf:  'Cd's to frontmost window of MacOS Finder
 #   ------------------------------------------------------
