@@ -17,7 +17,7 @@
 
 
 #alias p='all_proxy=192.168.105.13:8118'
-alias ip='curl icanhazip.com'
+alias myip='curl icanhazip.com'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
