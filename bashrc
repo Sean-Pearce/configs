@@ -16,7 +16,7 @@
 #  ---------------------------------------------------------------------------
 
 
-alias p='all_proxy=192.168.105.13:8118'
+#alias p='all_proxy=192.168.105.13:8118'
 alias ip='curl icanhazip.com'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -28,6 +28,9 @@ alias gin='git stash'
 alias gou='gin pop'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 #   -------------------------------
 #   1.  ENVIRONMENT CONFIGURATION
@@ -35,7 +38,7 @@ alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 
 #   Change Prompt
 #   ------------------------------------------------------------
-    export PS1='\n${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n$ '
+    export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n$ '
 #   Set Paths
 #   ------------------------------------------------------------
     export PATH="$PATH:/usr/local/bin/"
