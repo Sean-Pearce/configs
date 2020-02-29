@@ -28,8 +28,8 @@ alias gin='git stash'
 alias gou='gin pop'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.bashrc_instance ]; then
+    . ~/.bashrc_instance
 fi
 
 #   -------------------------------
