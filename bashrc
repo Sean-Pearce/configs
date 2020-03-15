@@ -43,6 +43,7 @@ fi
 #   ------------------------------------------------------------
     export PATH="$PATH:/usr/local/bin/"
     export PATH="/usr/local/go/bin:/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+    export PATH="~/bin:$PATH"
 
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
