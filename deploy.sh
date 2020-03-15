@@ -1,8 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 
-configs="bashrc inputrc vimrc tmux.conf"
+configs=`ls | grep -v deploy.sh | grep -v README.md`
 for f in $configs
 do
-    ([ -L "$HOME/.$f" ] || [ -f "$HOME/.$f" ]) && rm "$HOME/.$f"
+    if [[ -f "$HOME/.$f" && ! -L "$HOME/.$f" ]]; then
+        mv $HOME/.$f{,.bak}
+    fi
+    if [[ -L "$HOME/.$f" ]]; then
+        rm "$HOME/.$f"
+    fi
     ln -s "$(pwd)/$f" "$HOME/.$f"
 done
