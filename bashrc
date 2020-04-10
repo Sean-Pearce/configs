@@ -19,6 +19,7 @@
 alias myip='curl icanhazip.com'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias genproto='protoc --go_out=. *.proto'
 
 alias gst='git status'
 alias gcm='git commit -m'
@@ -43,6 +44,7 @@ fi
     export PATH="$PATH:/usr/local/bin/"
     export PATH="/usr/local/go/bin:/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
     export PATH="~/bin:$PATH"
+    export PATH="$HOME/go/bin:$PATH"
 
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
