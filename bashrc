@@ -16,10 +16,9 @@
 #  ---------------------------------------------------------------------------
 
 
-alias myip='curl icanhazip.com'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias genproto='protoc --go_out=. *.proto'
+alias genproto='protoc --go_out=plugins=grpc:. *.proto'
 
 alias gst='git status'
 alias gcm='git commit -m'
@@ -27,6 +26,9 @@ alias gad='git add .'
 alias gin='git stash'
 alias gou='gin pop'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+
+# usage: myip / myip json / myip city / myip country
+myip () { curl ifconfig.co/$1; }
 
 if [ -f ~/.bashrc_instance ]; then
     . ~/.bashrc_instance
