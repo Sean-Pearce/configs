@@ -27,6 +27,10 @@ alias gin='git stash'
 alias gou='gin pop'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
+HIST=5000
+HISTFILESIZE=5000
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
 # usage: myip / myip json / myip city / myip country
 myip () { curl ifconfig.co/$1; }
 
