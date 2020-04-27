@@ -122,7 +122,7 @@ alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
 
 zipf () { zip -r "$1".zip "$1" ; }          # zipf:         To create a ZIP archive of a folder
 alias numFiles='echo $(ls -1 | wc -l)'      # numFiles:     Count of non-hidden files in current dir
-mkfile () { dd if=/dev/zero of=$1B.dat bs=$1 count=1 ; }
+mkfile () { dd if=/dev/zero of=$1B.dat bs=$1 count=1 ; }    # usage: mkfile 1K / mkfile 100M
 
 #   cdf:  'Cd's to frontmost window of MacOS Finder
 #   ------------------------------------------------------
